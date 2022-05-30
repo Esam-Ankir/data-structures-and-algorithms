@@ -1,5 +1,5 @@
 from data_structures.stack import Stack
 
 
-class PseudoQueue:
+class PseudoQueue:22
     pass
