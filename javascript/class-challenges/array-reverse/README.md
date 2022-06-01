@@ -16,6 +16,7 @@ Write a function called reverseArray which takes an array as an argument. Withou
 
 ## JavaScript Code
 
+```js
 'use strict';
 let input=[1, 2, 3, 4, 5, 6];
 let output=[ ]
@@ -24,7 +25,7 @@ function reverseArray(input){
    output[j] = input[i];
  }return output;
 };
-
+```
 
 
 
