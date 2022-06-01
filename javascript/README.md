@@ -12,3 +12,5 @@
 ### Content Links:
 
 [Reverse an array](./class-challenges/array-reverse/README.md)
+
+[Insert and shift an array in middle at index](./class-challenges/array-insert-shift/README.md)
