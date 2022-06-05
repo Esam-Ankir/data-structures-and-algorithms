@@ -53,18 +53,32 @@ let characters = [
 ];
 
 const sortByChildren = (charArray) => {
-  // Solution code here...
+  return charArray.sort((a, b) => {
+    if (a.children.length > b.children.length) {
+      return 1;
+    }
+    if (a.children.length < b.children.length) {
+      return -1;
+    }
+    if (a.name > b.name) {
+      return 1;
+    }
+    if (a.name < b.name) {
+      return -1;
+    }
+  });
 };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
 
-Write a function named containsW that takes in a string. This function should use a regular expression pattern to return true if the string contains the letter 'w' in lower case or false if it does not. 
+Write a function named containsW that takes in a string. This function should use a regular expression pattern to return true if the string contains the letter 'w' in lower case or false if it does not.
 
 ------------------------------------------------------------------------------------------------ */
 
 const containsW = (str) => {
-  // Solution code here...
+  let reg = /w/g;
+  return reg.test(str);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -80,7 +94,8 @@ For example:
 ------------------------------------------------------------------------------------------------ */
 
 const isNum = (input) => {
-  // Solution code here...
+  let reg = /[0-9]/g;
+  return reg.test(input);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -91,7 +106,8 @@ Write a function named containsWorld that takes in a string or number of any len
 ------------------------------------------------------------------------------------------------ */
 
 const containsWorld = (input) => {
-  // Solution code here...
+  let reg = /(world)/g;
+  return reg.test(input);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -103,7 +119,9 @@ Return an array containing all the matches.
 ------------------------------------------------------------------------------------------------ */
 
 const isCapitalized = (str) => {
-  // Solution code here...
+  let reg = /[A-Z][a-z]*/g;
+  let matchStr = str.match(reg);
+  return matchStr || [];
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -113,7 +131,9 @@ Write a function named citiesAtoJ that takes in an array of city names and uses 
 ------------------------------------------------------------------------------------------------ */
 
 const citiesAtoJ = (arr) => {
-  // Solution code here...
+  let reg = /^[A-J]/;
+  let output = arr.filter(element => reg.test(element));
+  return output;
 };
 
 /* ------------------------------------------------------------------------------------------------

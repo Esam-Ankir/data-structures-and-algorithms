@@ -25,7 +25,8 @@ let starWarsPeople = [
 ];
 
 const sortStarWarsCharacters = (starWarsArr) => {
-  // Solution code here...
+  let output= starWarsArr.sort((e1,e2)=>Number(e2.height) - Number(e1.height));
+  return output;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -35,7 +36,8 @@ Write a function named removeThree that takes an index and an array. The functio
 ------------------------------------------------------------------------------------------------ */
 
 const removeThree = (idx, arr) => {
-  // Solution code here...
+  arr.splice(idx,3);
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -45,7 +47,7 @@ Write a function named joinArray that takes an array and joins all of the elemen
 ------------------------------------------------------------------------------------------------ */
 
 const joinArray = (arr) => {
-  // Solution code here...
+  return arr.join(' ');
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -62,9 +64,15 @@ For example, if the input is 'Welcome', the output will be:
 ------------------------------------------------------------------------------------------------ */
 
 const howMuchPencil = (str) => {
-  let result = [];
-  // Solution code here...
-  return result;
+  let output = [];
+  output.push(str);
+  let newStr=str.split('');
+  for(let i=0;i<str.length;i++){
+    newStr=newStr.slice(1,newStr.length).join('');
+    output.push(newStr);
+    newStr=newStr.split('');
+  }
+  return output;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -76,7 +84,7 @@ For example, wordsToCharList('gregor') returns ['g','r','e','g','o','r'].
 ------------------------------------------------------------------------------------------------ */
 
 const wordsToCharList = (arr) => {
-  // Solution code here...
+  return arr.split('');
 };
 
 
@@ -122,9 +130,12 @@ const gruffaloCrumble = {
 
 
 const listFoods = (recipe) => {
-  let result = [];
-  // Solution code here...
-  return result;
+  let output = [];
+  for (let i=0;i<recipe.ingredients.length;i++){
+    let str=recipe.ingredients[i].indexOf(' ',6);
+    output.push(recipe.ingredients[i].slice(str+1));
+  }
+  return output;
 };
 
 /* ------------------------------------------------------------------------------------------------
