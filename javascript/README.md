@@ -11,6 +11,8 @@
 
 ### Content Links:
 
-[Reverse an array](./class-challenges/array-reverse/README.md)
+[Reverse an array](./whiteboard-challenges/array-reverse/README.md)
 
-[Insert and shift an array in middle at index](./class-challenges/array-insert-shift/README.md)
+[Insert and shift an array in middle at index](./whiteboard-challenges/array-insert-shift/README.md)
+
+[Implementation: Singly Linked Lists](./datastructure-challenges/linkedList/README.md)
