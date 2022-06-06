@@ -16,3 +16,6 @@
 [Insert and shift an array in middle at index](./whiteboard-challenges/array-insert-shift/README.md)
 
 [Implementation: Singly Linked Lists](./datastructure-challenges/linkedList/README.md)
+
+[Binary search in a sorted 1D array](./whiteboard-challenges/array-binary-search/README.md)
+
