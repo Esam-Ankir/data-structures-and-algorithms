@@ -19,3 +19,6 @@
 
 [Binary search in a sorted 1D array](./whiteboard-challenges/array-binary-search/README.md)
 
+[Fibonacci](./whiteboard-challenges/fibonacci/README.md)
+
+
