@@ -1,91 +1,57 @@
 # Implementation: Singly Linked Lists
 
-![img](.)
+![img](./)
+![img](./)
+
 
 ## Specifications
 
 * Read all of these instructions carefully.
-
 * Name things exactly as described.
-
 * Do all your work in a your data-structures-and-algorithms public repository.
-
 * Create a new branch in your repo named as noted below.
-
 * Follow the language-specific instructions for the challenge type listed below.
-
 * Update the “Table of Contents” - in the README at the root of the repository - with a link to this challenge’s README file.
 
 ## Challenge Setup & Execution
 
-**Branch Name: linked-list**
+**Branch Name: linked-list-insertions**
 
-**Challenge Type: New Implementation**
+**Challenge Type: Extending an Implementation**
 
 ## Features
 
-### Node
 
-Create a Node class that has properties for the value stored in the Node, and a pointer to the next Node.
+Write the following methods for the Linked List class:
 
-### Linked List
+**append**
 
-* Create a Linked List class
+arguments: new value
 
-* Within your Linked List class, include a head property.
+adds a new node with the given value to the end of the list
 
-* Upon instantiation, an empty Linked List should be created.
+**insert before**
 
-* The class should contain the following methods:
+arguments: value, new value
 
-***insert***
+adds a new node with the given new value immediately before the first node that has the value specified
 
-* Arguments: value
+**insert after**
 
-* Returns: nothing
+arguments: value, new value
 
-* Adds a new node with that value to the head of the list with an O(1) Time performance.
-
-
-***includes***
-
-* Arguments: value
-
-* Returns: Boolean
-
-* Indicates whether that value exists as a Node’s value somewhere within the list.
+adds a new node with the given new value immediately after the first node that has the value specified
 
 
-***to string***
+## Testing
 
-* Arguments: none
-
-* Returns: a string representing all the values in the Linked List, formatted as:
-"{ a } -> { b } -> { c } -> NULL"
-
-- Any exceptions or errors that come from your code should be semantic, capture-able errors. For example, rather than a default error thrown by your language, your code should raise/throw a custom, semantic error that describes what went wrong in calling the methods you wrote for this lab.
-
-- Be sure to follow your language/frameworks standard naming conventions (e.g. C# uses PascalCasing for all method and class names).
-
-
-## Structure and Testing
-
-Utilize the Single-responsibility principle: any methods you write should be clean, reusable, abstract component parts to the whole challenge. You will be given feedback and marked down if you attempt to define a large, complex algorithm in one function definition.
 
 Write tests to prove the following functionality:
 
-1. Can successfully instantiate an empty linked list
+1. Can successfully add a node to the end of the linked list
+2. Can successfully add multiple nodes to the end of a linked list
+3. Can successfully insert a node before a node located i the middle of a linked list
+4. Can successfully insert a node before the first node of a linked list
+5. Can successfully insert after a node in the middle of the linked list
+6. Can successfully insert a node after the last node of the linked list
 
-2. Can properly insert into the linked list
-
-3. The head property will properly point to the first node in the linked list
-
-4. Can properly insert multiple nodes into the linked list
-
-5. Will return true when finding a value within the linked list that exists
-
-6. Will return false when searching for a value in the linked list that does not exist
-
-7. Can properly return a collection of all the values that exist in the linked list
-
-Ensure your tests are passing before you submit your solution.
