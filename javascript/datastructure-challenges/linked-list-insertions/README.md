@@ -1,7 +1,15 @@
 # Implementation: Singly Linked Lists
 
-![img](./)
-![img](./)
+![img](./assets/append.PNG)
+![img](./assets/insertafterLL.PNG)
+
+## screenshots
+
+![img](./assets/1.PNG)
+![img](./assets/2.PNG)
+
+
+
 
 
 ## Specifications
