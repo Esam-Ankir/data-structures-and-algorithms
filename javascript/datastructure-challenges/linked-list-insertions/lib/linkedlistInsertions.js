@@ -1,3 +1,5 @@
+/* eslint-disable quotes */
+/* eslint-disable no-unreachable */
 /* eslint-disable new-cap */
 'use strict';
 const Node = require('./node');
@@ -8,9 +10,7 @@ class LinkedList {
     this.tail = null;
     this.length = 0;
   }
-  // AddHead(value) {
-  //   this.head = new Node(value, this.head);
-  // }
+
   insert(value) {
     let newNode = new Node(value);
     if (!this.head) {
@@ -22,7 +22,6 @@ class LinkedList {
       return this;
     }
   }
-
 
   append(newValue) {
     let newNode = new Node(newValue);
@@ -38,6 +37,26 @@ class LinkedList {
       this.tail = newNode;
     }
     this.length++;
+  }
+
+
+  kthFromEnd(k) {
+    let length = 0;
+    let count = 1;
+    let node = this.head;
+    let curr = this.head;
+    while (node) {
+      length++;
+      node = node.next;
+    }
+    while (curr) {
+      if (k=== length - count) {
+        return (curr.value);
+      }
+      count++;
+      curr = curr.next;
+    }
+    return "Exception";
   }
 
   insertBefore(value, newValue) {
