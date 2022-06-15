@@ -1,3 +1,4 @@
+/* eslint-disable quotes */
 'use strict';
 const LinkedList = require('./lib/linkedlistInsertions');
 
@@ -15,8 +16,21 @@ list.insertAfter(2,700);
 
 console.log(list.toString());
 
+console.log(list.kthFromEnd(0));
+console.log(list.kthFromEnd(1));
+console.log(list.kthFromEnd(2));
+console.log(list.kthFromEnd(3));
+console.log(list.kthFromEnd(4));
+console.log(list.kthFromEnd(5));
+console.log(list.kthFromEnd(6));
+
 console.log(7,list.includes(7));
 console.log(1,list.includes(1));
+
+
+
+
+
 
 
 

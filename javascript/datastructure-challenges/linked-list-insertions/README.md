@@ -1,5 +1,5 @@
 # Implementation: Singly Linked Lists
-
+![img](./assets/insertafterLL.PNG)
 ![img](./assets/append.PNG)
 ![img](./assets/insertafterLL.PNG)
 
