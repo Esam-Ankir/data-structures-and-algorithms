@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 'use strict';
 
 /* ------------------------------------------------------------------------------------------------
@@ -66,7 +67,7 @@ const speaker = (words, callback) => {
   let newArr = [];
   words.forEach(element => {
     newArr.push(callback(element));
-  })
+  });
   return newArr;
 };
 
