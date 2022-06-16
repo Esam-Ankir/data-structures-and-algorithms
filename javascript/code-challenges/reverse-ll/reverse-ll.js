@@ -1,7 +1,8 @@
+/* eslint-disable no-unused-vars */
 'use strict';
 
 // Require the linked list implementation
-const LinkedList = require('../../linked-list');
+const LinkedList = require('../../datastructure-challenges/linked-list/lib/linkedlist');
 
 
 /*

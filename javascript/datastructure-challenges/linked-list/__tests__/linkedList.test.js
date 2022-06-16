@@ -47,7 +47,7 @@ describe('Linked List Test', () => {
     expect(list.toString()).toBe('{2} --> {1} --> NULL');
   });
   /////for testing linked list insertions:append,insertBefore and insertAfter
-  test('Test01:Can successfully add a node to the end of the linked list', () => {
+  test('Test08:Can successfully add a node to the end of the linked list', () => {
     let list = new LinkedList();
     list.insert('3');
     list.insert('2');
@@ -55,7 +55,7 @@ describe('Linked List Test', () => {
     list.append('5');
     expect(list.toString()).toBe('{1} --> {2} --> {3} --> {5} --> NULL');
   });
-  test('Test02:Can successfully add multiple nodes to the end of a linked list', () => {
+  test('Test09:Can successfully add multiple nodes to the end of a linked list', () => {
     let list = new LinkedList();
     list.insert('3');
     list.insert('2');
@@ -64,7 +64,7 @@ describe('Linked List Test', () => {
     list.append('6');
     expect(list.toString()).toBe('{1} --> {2} --> {3} --> {5} --> {6} --> NULL');
   });
-  test('Test03:Can successfully insert a node before a node located in the middle of a linked list', () => {
+  test('Test10:Can successfully insert a node before a node located in the middle of a linked list', () => {
     let list = new LinkedList();
     list.insert('3');
     list.insert('2');
@@ -72,7 +72,7 @@ describe('Linked List Test', () => {
     list.insertBefore('2', '0');
     expect(list.toString()).toBe('{1} --> {0} --> {2} --> {3} --> NULL');
   });
-  test('Test04:Can successfully insert a node before the first node of a linked list', () => {
+  test('Test11:Can successfully insert a node before the first node of a linked list', () => {
     let list = new LinkedList();
     list.insert('3');
     list.insert('2');
@@ -80,7 +80,7 @@ describe('Linked List Test', () => {
     list.insertBefore('1', '0');
     expect(list.toString()).toBe('{0} --> {1} --> {2} --> {3} --> NULL');
   });
-  test('Test05:Can successfully insert after a node in the middle of the linked list', () => {
+  test('Test12:Can successfully insert after a node in the middle of the linked list', () => {
     let list = new LinkedList();
     list.insert('3');
     list.insert('2');
@@ -88,7 +88,7 @@ describe('Linked List Test', () => {
     list.insertAfter('2', '0');
     expect(list.toString()).toBe('{1} --> {2} --> {0} --> {3} --> NULL');
   });
-  test('Test06:Can successfully insert a node after the last node of the linked list', () => {
+  test('Test13:Can successfully insert a node after the last node of the linked list', () => {
     let list = new LinkedList();
     list.insert('3');
     list.insert('2');
@@ -97,33 +97,33 @@ describe('Linked List Test', () => {
     expect(list.toString()).toBe('{1} --> {2} --> {3} --> {0} --> NULL');
   });
   /////for testing kthFromEnd
-  test('Test07:Where k is greater than the length of the linked list', () => {
+  test('Test14:Where k is greater than the length of the linked list', () => {
     let list = new LinkedList();
     list.insert('3');
     list.insert('2');
     list.insert('1');
     expect(list.kthFromEnd(6)).toBe('Exception');
   });
-  test('Test08:Where k and the length of the list are the same', () => {
+  test('Test15:Where k and the length of the list are the same', () => {
     let list = new LinkedList();
     list.insert('0');
     list.insert('1');
     list.insert('2');
     expect(list.kthFromEnd(2)).toBe('2');
   });
-  test('Test09:Where k is not a positive integer', () => {
+  test('Test16:Where k is not a positive integer', () => {
     let list = new LinkedList();
     list.insert('3');
     list.insert('2');
     list.insert('1');
     expect(list.kthFromEnd(-1)).toBe('Exception');
   });
-  test('Test10:Where the linked list is of a size 1', () => {
+  test('Test17:Where the linked list is of a size 1', () => {
     let list = new LinkedList();
     list.insert('0');
     expect(list.kthFromEnd(0)).toBe('0');
   });
-  test('Test11:Where k is not at the end, but somewhere in the middle of the linked list', () => {
+  test('Test18:Where k is not at the end, but somewhere in the middle of the linked list', () => {
     let list = new LinkedList();
     list.insert('3');
     list.insert('2');
