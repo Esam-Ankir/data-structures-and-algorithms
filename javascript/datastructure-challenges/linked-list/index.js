@@ -1,6 +1,6 @@
 /* eslint-disable quotes */
 'use strict';
-const LinkedList = require('./lib/linkedlistInsertions');
+const LinkedList = require('./lib/linkedlist');
 
 const list = new LinkedList();
 

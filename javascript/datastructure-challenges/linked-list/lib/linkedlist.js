@@ -22,7 +22,30 @@ class LinkedList {
       return this;
     }
   }
-
+  includes(value) {
+    let doesExist = false;
+    let curr = this.head;
+    while (curr) {
+      // console.log(value, curr.value);
+      if (curr.value === value) {
+        doesExist = true;
+      }
+      curr = curr.next;
+    }
+    return doesExist;
+  }
+  toString() {
+    let str = '';
+    let curr = this.head;
+    while (curr) {
+      str += `{${curr.value}} --> `;
+      if (curr.next === null) {
+        str += 'NULL';
+      }
+      curr = curr.next;
+    }
+    return str;
+  }
   append(newValue) {
     let newNode = new Node(newValue);
     if (!this.head) {
@@ -38,27 +61,6 @@ class LinkedList {
     }
     this.length++;
   }
-
-
-  kthFromEnd(k) {
-    let length = 0;
-    let count = 1;
-    let node = this.head;
-    let curr = this.head;
-    while (node) {
-      length++;
-      node = node.next;
-    }
-    while (curr) {
-      if (k=== length - count) {
-        return (curr.value);
-      }
-      count++;
-      curr = curr.next;
-    }
-    return "Exception";
-  }
-
   insertBefore(value, newValue) {
     let newNode = new Node(newValue);
     let curr = this.head;
@@ -79,7 +81,6 @@ class LinkedList {
       curr = curr.next;
     }
   }
-
   insertAfter(value, newValue) {
     let newNode = new Node(newValue);
     let curr = this.head;
@@ -93,30 +94,23 @@ class LinkedList {
       curr = curr.next;
     }
   }
-  includes(value) {
-    let doesExist = false;
+  kthFromEnd(k) {
+    let length = 0;
+    let count = 1;
+    let node = this.head;
     let curr = this.head;
+    while (node) {
+      length++;
+      node = node.next;
+    }
     while (curr) {
-      // console.log(value, curr.value);
-      if (curr.value === value) {
-        doesExist = true;
+      if (k === length - count) {
+        return (curr.value);
       }
+      count++;
       curr = curr.next;
     }
-    return doesExist;
-  }
-
-  toString() {
-    let str = '';
-    let curr = this.head;
-    while (curr) {
-      str += `{${curr.value}} --> `;
-      if (curr.next === null) {
-        str += 'NULL';
-      }
-      curr = curr.next;
-    }
-    return str;
+    return "Exception";
   }
 }
 
