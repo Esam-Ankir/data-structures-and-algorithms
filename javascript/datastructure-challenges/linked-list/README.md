@@ -1,5 +1,8 @@
 # Implementation: Singly Linked Lists
 
+![img](./assets/ziplinkedlist.PNG)
+
+
 ![img](./assets/kthFromEnd.PNG)
 
 
