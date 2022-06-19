@@ -4,7 +4,7 @@
 const LinkedList = require('../lib/linkedlist');
 
 describe('Linked List Test', () => {
-  /////for testing insert,includes and toString
+  /////for testing insert,includes and toString//////////////////////////////////////////////////////
   test('Test1:Can successfully instantiate an empty linked list', () => {
     let list = new LinkedList();
     expect(list.head).toBeNull();
@@ -46,7 +46,7 @@ describe('Linked List Test', () => {
     list.insert(2);
     expect(list.toString()).toBe('{2} --> {1} --> NULL');
   });
-  /////for testing linked list insertions:append,insertBefore and insertAfter
+  /////for testing linked list insertions:append,insertBefore and insertAfter////////////////////////////////
   test('Test08:Can successfully add a node to the end of the linked list', () => {
     let list = new LinkedList();
     list.insert('3');
@@ -96,7 +96,7 @@ describe('Linked List Test', () => {
     list.insertAfter('3', '0');
     expect(list.toString()).toBe('{1} --> {2} --> {3} --> {0} --> NULL');
   });
-  /////for testing kthFromEnd
+  /////for testing kthFromEnd/////////////////////////////////////////////////////////////////////////////////////
   test('Test14:Where k is greater than the length of the linked list', () => {
     let list = new LinkedList();
     list.insert('3');
@@ -129,5 +129,47 @@ describe('Linked List Test', () => {
     list.insert('2');
     list.insert('1');
     expect(list.kthFromEnd(1)).toBe('2');
+  });
+  /////for testing zipLists/////////////////////////////////////////////////////////////////////////////////////
+  test('Test19:can zip two different lists with the same length', () => {
+    let list1 = new LinkedList();
+    let list2 = new LinkedList();
+    let outlist = new LinkedList();
+    list1.insert('3');
+    list1.insert('2');
+    list1.insert('1');
+    list2.insert('4');
+    list2.insert('5');
+    list2.insert('6');
+    expect(outlist.zipLists(list1,list2).toString()).toBe('{1} --> {6} --> {2} --> {5} --> {3} --> {4} --> NULL');
+  });
+  test('Test20:can zip two different lists with different lengths', () => {
+    let list1 = new LinkedList();
+    let list2 = new LinkedList();
+    let outlist = new LinkedList();
+    // list1.insert('4');
+    list1.insert('3');
+    list1.insert('2');
+    list1.insert('1');
+    list2.insert('4');
+    list2.insert('4');
+    list2.insert('5');
+    list2.insert('6');
+    expect(outlist.zipLists(list1,list2).toString()).toBe('{1} --> {6} --> {2} --> {5} --> {3} --> {4} --> {4} --> NULL');
+  });
+  test('Test21:can zip two lists one is empty list', () => {
+    let list1 = new LinkedList();
+    let list2 = new LinkedList();
+    let outlist = new LinkedList();
+    list1.insert('3');
+    list1.insert('2');
+    list1.insert('1');
+    expect(outlist.zipLists(list1,list2).toString()).toBe('{1} --> {2} --> {3} --> NULL');
+  });
+  test('Test22:can zip two empty lists', () => {
+    let list1 = new LinkedList();
+    let list2 = new LinkedList();
+    let outlist = new LinkedList();
+    expect(outlist.zipLists(list1,list2).toString()).toBe('');
   });
 });

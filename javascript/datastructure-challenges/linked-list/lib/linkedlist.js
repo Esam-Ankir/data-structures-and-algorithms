@@ -118,7 +118,7 @@ class LinkedList {
     let node2 = list2.head;
     let outList = new LinkedList();
 
-    while (node1) {
+    while (node1||node2) {
       if(node1) {
         outList.append(node1.value);
         node1 = node1.next;
