@@ -1,21 +1,32 @@
 # Implementation: Singly Linked Lists
 
+![img](./assets/reverseLL.PNG)
+
+
+
 ![img](./assets/ziplinkedlist.PNG)
+
 
 
 ![img](./assets/kthFromEnd.PNG)
 
 
+
 ![img](./assets/append.PNG)
+
 
 
 ![img](./assets/insertafterLL.PNG)
 
+
 ## screenshots
+
 ![img](./assets/test%20LL.PNG)
 
 
+
 ![img](./assets/1.PNG)
+
 
 
 ![img](./assets/2.PNG)
