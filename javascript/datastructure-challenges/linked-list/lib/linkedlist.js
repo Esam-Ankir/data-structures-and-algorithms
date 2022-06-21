@@ -111,23 +111,23 @@ class LinkedList {
     }
     return 'Exception';
   }
-  zipLists(list1, list2) {
+  // zipLists(list1, list2) {
 
-    let node1 = list1.head;
-    let node2 = list2.head;
-    let outList = new LinkedList();
-    while (node1 || node2) {
-      if (node1) {
-        outList.append(node1.value);
-        node1 = node1.next;
-      }
-      if (node2) {
-        outList.append(node2.value);
-        node2 = node2.next;
-      }
-    }
-    return outList;
-  }
+  //   let node1 = list1.head;
+  //   let node2 = list2.head;
+  //   let outList = new LinkedList();
+  //   while (node1 || node2) {
+  //     if (node1) {
+  //       outList.append(node1.value);
+  //       node1 = node1.next;
+  //     }
+  //     if (node2) {
+  //       outList.append(node2.value);
+  //       node2 = node2.next;
+  //     }
+  //   }
+  //   return outList;
+  // }
   reverse(LL) {
     let prev = null;
     let next = null;
@@ -147,30 +147,6 @@ class LinkedList {
     return reversedLL;
   }
 
-  // isPalindrome(inputLL) {
-  //   let prev = null;
-  //   let next = null;
-  //   let revLL = new LinkedList();
-  //   if (inputLL) {
-  //     let curr = inputLL.head;
-  //     while (curr) {
-  //       next = curr.next;
-  //       curr.next = prev;
-  //       prev = curr;
-  //       curr = next;
-  //     }
-  //     revLL.head = prev;
-  //     // return revLL;
-  //     if (inputLL === revLL) {
-  //       return true;
-  //     } else {
-  //       return false;
-  //     }
-  //   }
-  //   // return inputLL;
-
-  //   return 'no input';
-  // }
   // reverseAndClone(node) {
   //   let head = null;
   //   while (node) {
@@ -180,19 +156,17 @@ class LinkedList {
   //     node = node.next;
   //   }
   //   return head;
-
   // }
-  isPalindrome(list) {
-    let newLL=new LinkedList();
-    let reversedList = newLL.reverse(list);
-    while (list && reversedList) {
-      if (list.value !== reversedList.value) return false;
-      list = list.next;
-      reversedList = reversedList.next;
-    }
-    return true;
-
-  }
+  // isPalindrome(list) {
+  //   let newLL=new LinkedList();
+  //   let reversedList = newLL.reverse(list);
+  //   while (list && reversedList) {
+  //     if (list.value !== reversedList.value) return false;
+  //     list = list.next;
+  //     reversedList = reversedList.next;
+  //   }
+  //   return true;
+  // }
 }
 
 module.exports = LinkedList;
