@@ -21,6 +21,13 @@
 
 [linked List Insertion](./datastructure-challenges/linked-list/README.md)
 
+[Stack](./datastructure-challenges/stack/README.md)
+
+[Queue](./datastructure-challenges/queue/README.md)
+
+[stack queue pseudo](./datastructure-challenges/stack-queue-pseudo/README.md)
+
+
 
 
 
