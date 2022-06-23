@@ -13,13 +13,13 @@ Internally, utilize 2 Stack instances to create and manage the queue
 
 Methods:
 
-enqueue
+***enqueue***
 
 Arguments: value
 
 Inserts value into the PseudoQueue, using a first-in, first-out approach.
 
-dequeue
+***dequeue***
 
 Arguments: none
 
