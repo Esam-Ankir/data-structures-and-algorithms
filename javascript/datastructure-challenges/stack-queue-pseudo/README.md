@@ -1,6 +1,16 @@
 # Implement a Queue using two Stacks.
 
 
+![img](./assets/PseudoQueue.PNG)
+
+
+
+
+![img](./assets/testsScreenShots.PNG)
+
+
+
+
 ## Feature Tasks
 
 Create a new class called pseudo queue.
