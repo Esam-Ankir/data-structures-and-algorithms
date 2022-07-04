@@ -19,13 +19,21 @@
 
 [Fibonacci](./whiteboard-challenges/fibonacci/README.md)
 
-[linked List Insertion](./datastructure-challenges/linked-list/README.md)
+[linked List](./datastructure-challenges/linked-list/README.md)
 
 [Stack](./datastructure-challenges/stack/README.md)
 
 [Queue](./datastructure-challenges/queue/README.md)
 
-[stack queue pseudo](./datastructure-challenges/stack-queue-pseudo/README.md)
+[stack queue pseudo](./datastructure-challenges/stack-queue/stack-queue-pseudo/README.md)
+
+[stack-queue-animal-shelter](./datastructure-challenges/stack-queue/stack-queue-animal-shelter/README.md)
+
+[stack-queue-brackets](./datastructure-challenges/stack-queue/stack-queue-brackets/README.md)
+
+[trees](./datastructure-challenges/trees/README.md)
+
+
 
 
 
