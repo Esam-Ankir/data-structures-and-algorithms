@@ -1,6 +1,6 @@
 # Trees
 
-![img](./assets/trees-screenshot.PNG)
+![img](./assets/treesScreenshot.PNG)
 
 
 
