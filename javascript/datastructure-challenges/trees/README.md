@@ -1,6 +1,10 @@
 # Trees
 
-![img](./assets/treesScreenshot.PNG)
+## Whiteboard for findMax
+![img](./assets/findMax.PNG)
+
+## Tests screenshot
+![img](./assets/tests.PNG)
 
 
 
