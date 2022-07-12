@@ -51,4 +51,7 @@ describe('Binary Tree', () => {
   test('findMax', () => {
     expect(tree.findMax()).toEqual(9);
   });
+  test('breadthFirst', () => {
+    expect(tree.breadthFirst()).toEqual([1, 2, 3, 6, 4, 5, 7, 8, 9]);
+  });
 });
