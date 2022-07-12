@@ -53,7 +53,7 @@ describe('Binary Search Tree', () => {
     let postOrder = tree2.postOrder();
     expect(postOrder).toEqual(expectedOutput);
   });
-  test('test7:Returns true	false for the contains method, given an existing or non-existing node value', () => {
+  test('test7:Returns true or false for the contains method, given an existing or non-existing node value', () => {
     expect(tree2.contains(7)).toBe(true);
     expect(tree2.contains(13)).toBe(false);
   });
