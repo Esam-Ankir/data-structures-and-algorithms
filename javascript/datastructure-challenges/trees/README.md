@@ -1,5 +1,8 @@
 # Trees
 
+## Whiteboard for FizzBuzz on k-ary tree
+![img](./assets/kAryTree.PNG)
+
 ## Whiteboard for breadthFirst
 ![img](./assets/breadthFirst.PNG)
 
@@ -7,7 +10,7 @@
 ![img](./assets/findMax.PNG)
 
 ## Tests screenshot
-![img](./assets/tests.PNG)
+![img](./assets/treetests.PNG)
 
 
 

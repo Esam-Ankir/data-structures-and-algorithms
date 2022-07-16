@@ -42,6 +42,22 @@ class BinaryTree {
     traverse(this.root);
     return result;
   }
+  //level order
+  breadthFirst() {
+    let queue = [];
+    let result = [];
+    let node = this.root;
+    queue.push(node);
+
+    while (queue.length) {
+      node = queue.shift();
+
+      result.push(node.value);
+      if (node.left) queue.push(node.left);
+      if (node.right) queue.push(node.right);
+    }
+    return result;
+  }
   findMax() {
     let max = 0;
     let traverse = (node) => {
@@ -52,31 +68,7 @@ class BinaryTree {
     traverse(this.root);
     return max;
   }
-  //expected[ 1, 2, 3, 6, 4, 5, 7, 8, 9]
-  breadthFirst() {
-    let queue = [];
-    let result = [];
-    let node = this.root;
-    console.log({ node });
-    queue.push(node);
-    console.log({ queue });
 
-    while (queue.length) {
-      node = queue.shift();
-      console.log({ node });
-
-      result.push(node.value);
-      console.log({ result });
-
-      if (node.left) queue.push(node.left);
-      console.log({ node });
-
-      if (node.right) queue.push(node.right);
-      console.log({ node });
-
-    }
-    return result;
-  }
 
 }
 module.exports = BinaryTree;
