@@ -31,7 +31,7 @@
 
 [stack-queue-brackets](./datastructure-challenges/stack-queue/stack-queue-brackets/README.md)
 
-[Trees:(BinaryTree: preOrder,inOrder,postOrder,findMax,breadthFirst), (BinarySearchTree: add,contains), (fizBuzzTree), (isSameFilesNumber)](./datastructure-challenges/trees/README.md)
+[Trees:(BinaryTree: preOrder,inOrder,postOrder,findMax,breadthFirst), (BinarySearchTree: add,contains), (fizBuzzTree), (isSameFilesNumber), (oddSum)](./datastructure-challenges/trees/README.md)
 
 
 
