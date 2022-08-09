@@ -1,6 +1,9 @@
 # Trees
 
 ## Whiteboard for FizzBuzz on k-ary tree
+![img](./assets/treesSameNumFiles.PNG)
+
+## Whiteboard for FizzBuzz on k-ary tree
 ![img](./assets/kAryTree.PNG)
 
 ## Whiteboard for breadthFirst

@@ -1,13 +1,12 @@
 'use strict';
 const BinaryTree = require('./binary-tree');
-const BinarySearchTree = require('./binarySearchTree');
-const KAryTree = require('./k-aryTree');
+// const BinarySearchTree = require('./binarySearchTree');
+const isSameFilesNumber = require('./isSameFilesNumber');
 const Node = require('./node');
 
 ////binary tree////////////////////////////////////////////////////////////////////////
 console.log('==================binary tree==================');
 let tree = null;
-let kTree = null;
 
 let one = new Node(1);
 let two2 = new Node(2);
@@ -29,26 +28,25 @@ three.left = four;
 three.right = five5;
 
 tree = new BinaryTree(one);
-kTree=new KAryTree(one);
 
-console.log("max=",tree.findMax());
+// console.log("max=", tree.findMax());
 
-let preOrder = tree.preOrder();
-console.log('pre order: ', preOrder);
-//pre order > 1 , 2 , 6 , 7 , 8 , 9 , 3 , 4 , 5
+// let preOrder = tree.preOrder();
+// console.log('pre order: ', preOrder);
+// //pre order > 1 , 2 , 6 , 7 , 8 , 9 , 3 , 4 , 5
 
-let inOrder = tree.inOrder();
-console.log('in order: ', inOrder);
-//pre order > 6 , 8 , 7 , 9 , 2 , 1 , 4 , 3 , 5
+// let inOrder = tree.inOrder();
+// console.log('in order: ', inOrder);
+// //pre order > 6 , 8 , 7 , 9 , 2 , 1 , 4 , 3 , 5
 
-let postOrder = tree.postOrder();
-console.log('post order: ', postOrder);
-// //pre order > 8 , 9 , 7 , 6 , 2 , 4 , 5 , 3 , 1
+// let postOrder = tree.postOrder();
+// console.log('post order: ', postOrder);
+// // //pre order > 8 , 9 , 7 , 6 , 2 , 4 , 5 , 3 , 1
 
-console.log('breadthFirst: ',tree.breadthFirst());
-//expected[ 1, 2, 3, 6, 4, 5, 7, 8, 9]
+// console.log('breadthFirst: ', tree.breadthFirst());
+// //expected[ 1, 2, 3, 6, 4, 5, 7, 8, 9]
 
-console.log('fizzBuzz: ',kTree.fizzBuzz());
+console.log('oddSum= ', tree.oddSum());
 
 ///////////////////////////////
 // let tree = null;
@@ -96,24 +94,50 @@ five.right = seven;
 fivteen.left = twelve;
 fivteen.right = seventeen;
 
-let tree2 = null;
+// let tree2 = null;
 
-tree2 = new BinarySearchTree(ten);
+// tree2 = new BinarySearchTree(ten);
 
-tree2.add(18);
-tree2.add(4);
-console.log(tree2.contains(1));
-console.log(tree2.contains(4));
-console.log(tree2.contains(7));
-console.log('pre order: ', tree2.preOrder());
+// tree2.add(18);
+// tree2.add(4);
+// console.log(tree2.contains(1));
+// console.log(tree2.contains(4));
+// console.log(tree2.contains(7));
+// console.log('pre order: ', tree2.preOrder());
 
-console.log("max=",tree2.findMax());
+// console.log("max=", tree2.findMax());
 
-const newTree = new BinarySearchTree();
-newTree.add(10);
-newTree.add(11);
-newTree.add(12);
+// const newTree = new BinarySearchTree();
+// newTree.add(10);
+// newTree.add(11);
+// newTree.add(12);
+let tree3 = null;
+let tree4 = null;
 
+let folder1 = new Node("folder1");
+let folder2 = new Node("folder2");
+let folder3 = new Node("folder3");
+let file1 = new Node("file.css");
+let file2 = new Node("file.js");
+
+folder1.left = folder2;
+folder1.right = folder3;
+folder2.right = file1;
+folder3.right = file2;
+
+let folder4 = new Node("folder4");
+let folder5 = new Node("folder5");
+let folder6 = new Node("folder6");
+let file3 = new Node("file.py");
+let file4 = new Node("file.java");
+
+folder4.left = folder5;
+folder4.right = folder6;
+folder5.right = file3;
+folder6.right = file4;
+tree3 = new BinaryTree(folder1);
+tree4 = new BinaryTree(folder4);
+console.log("isSameFilesNumber:", isSameFilesNumber(tree3, tree4));
 
 
 
