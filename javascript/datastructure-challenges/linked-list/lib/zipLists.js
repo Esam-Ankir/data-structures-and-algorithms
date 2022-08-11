@@ -2,8 +2,6 @@
 'use strict';
 const LinkedList = require('./linkedlist');
 
-
-
 function zipLists(list1, list2) {
 
   let node1 = list1.head;
