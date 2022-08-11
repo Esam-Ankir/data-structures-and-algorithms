@@ -33,6 +33,9 @@
 
 [Trees:(BinaryTree: preOrder,inOrder,postOrder,findMax,breadthFirst), (BinarySearchTree: add,contains), (fizBuzzTree), (isSameFilesNumber), (oddSum)](./datastructure-challenges/trees/README.md)
 
+[Array Insertion Sort](./whiteboard-challenges/array-insertion-sort/README.md)
+
+[Array Merge Sort](./whiteboard-challenges/array-merge-sort/README.md)
 
 
 
