@@ -37,9 +37,4 @@
 
 [Array Merge Sort](./whiteboard-challenges/array-merge-sort/README.md)
 
-
-
-
-
-
-
+[Array Quick Sort](./whiteboard-challenges/array-quick-sort/README.md)
