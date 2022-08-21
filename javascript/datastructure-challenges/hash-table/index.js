@@ -53,11 +53,8 @@ class Hashmap {
   // Arguments: key, value
   // Returns: nothing
   // This method should hash the key, and set the key and value pair in the table, handling collisions as needed.
-  // Should a given key already exist, replace its value from the value argument given to this method.
+  // (not been solved) Should a given key already exist, replace its value from the value argument given to this method.
   set(key, value) {
-    // if (key) {
-
-    // }
     const hashKey = this.hash(key);
     if (!this.table[hashKey]) {
       this.table[hashKey] = new LinkedList();
@@ -92,33 +89,20 @@ class Hashmap {
   }
   // keys
   // Returns: Collection of keys
-
   keys() {
     let keysArr = [];
+
     for (let i = 0; i < this.table.length; i++) {
       if (this.table[i]) {
         keysArr.push(Object.keys(this.table[i].head.value));
+        if (this.table[i].head.next) {
+          keysArr.push(Object.keys(this.table[i].head.next.value));
+        }
       }
     }
     return keysArr;
+
   }
-
-  // keys() {
-  //   let keys = [];
-  //   for (let i = 0; i < this.table.length; i++) {
-  //     if (this.table[i]) {
-  //       // console.log(this.table[7]);
-  //       for (let j = 0; j < this.table.length; j++) {
-  //         if (!keys.includes(this.table[i][j])) {
-  //           console.log(this.table[7]);
-  //           keys.push(this.table[i][j]);
-  //         }
-  //       }
-  //     }
-  //   }
-  //   return keys;
-  // }
-
 
 }
 
@@ -137,15 +121,15 @@ myhashmap.set('shihab', 'student shihab');
 // console.log(myhashmap.table[8]);
 // console.log(myhashmap.table[8].head.next);
 
-// myhashmap.table.forEach((ll) => {
-//   console.log(ll.values());
-// });
+myhashmap.table.forEach((ll) => {
+  console.log(ll.values());
+});
 
-// console.log(myhashmap.get('esam'));
-// console.log(myhashmap.get('samah'));
+console.log(myhashmap.get('esam'));
+console.log(myhashmap.get('samah'));
 
-// console.log(myhashmap.contains ('esam'));
-// console.log(myhashmap.contains ('sam'));
+console.log(myhashmap.contains ('esam'));
+console.log(myhashmap.contains ('sam'));
 
 console.log(myhashmap.keys());
 
