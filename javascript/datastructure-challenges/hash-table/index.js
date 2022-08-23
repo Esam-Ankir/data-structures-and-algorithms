@@ -101,19 +101,55 @@ class Hashmap {
       }
     }
     return keysArr;
-
   }
-
+  // Write a function called repeated word that finds the first word to occur more than once in a string
+  // Arguments: string
+  // Return: string
+  static repeatedWord(string) {
+    let lowerCase = string.toLowerCase().replace(/[^\w\s]/g, '');
+    let token = lowerCase.split(" ");
+    let newHash = new Hashmap(token.length);
+    console.log(token.length);
+    for (let i = 0; i < token.length; i++) {
+      if (newHash.contains(token[i]) && newHash.get(token[i]) === 1) {
+        newHash.set(token[i], newHash.get(token[i]) + 1);
+        // output = token[i];
+        console.log(token[i]);
+        return token[i];
+      } else {
+        newHash.set(token[i], 1);
+      }
+    }
+  }
 }
+let string1 = "Once upon a time, there was a brave princess who...";
+let string2 = "It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of foolishness, it was the epoch of belief, it was the epoch of incredulity, it was the season of Light, it was the season of Darkness, it was the spring of hope, it was the winter of despair, we had everything before us, we had nothing before us, we were all going direct to Heaven, we were all going direct the other way – in short, the period was so far like the present period, that some of its noisiest authorities insisted on its being received, for good or for evil, in the superlative degree of comparison only...";
+let string3 = "It was a queer, sultry summer, the summer they electrocuted the Rosenbergs, and I didn’t know what I was doing in New York...";
+let string4 = "Ravi had been saying that he had been there";
 
-const myhashmap = new Hashmap(10);
-myhashmap.set('esam', 'student esam');
-myhashmap.set('ahmad', 'student ahmad');
-myhashmap.set('mohamad', 'student mohamad');
-myhashmap.set('samah', 'student samah');
-myhashmap.set('laith', 'student laith');
-myhashmap.set('shihab', 'student shihab');
-myhashmap.set('shihab', 'student shihab');
+Hashmap.repeatedWord(string1);
+Hashmap.repeatedWord(string2);
+Hashmap.repeatedWord(string3);
+Hashmap.repeatedWord(string4);
+
+
+// const myhashmap = new Hashmap(10);
+// myhashmap.set('esam', 'student esam');
+
+// "Once upon a time, there was a brave princess who..."
+// =>"a"
+// "It was a queer, sultry summer, the summer they electrocuted the Rosenbergs, and I didn’t know what I was doing in New York..."
+// "summer"
+
+
+// const myhashmap = new Hashmap(10);
+// myhashmap.set('esam', 'student esam');
+// myhashmap.set('ahmad', 'student ahmad');
+// myhashmap.set('mohamad', 'student mohamad');
+// myhashmap.set('samah', 'student samah');
+// myhashmap.set('laith', 'student laith');
+// myhashmap.set('shihab', 'student shihab');
+// myhashmap.set('shihab', 'student shihab');
 
 
 // console.log(myhashmap);
@@ -121,17 +157,17 @@ myhashmap.set('shihab', 'student shihab');
 // console.log(myhashmap.table[8]);
 // console.log(myhashmap.table[8].head.next);
 
-myhashmap.table.forEach((ll) => {
-  console.log(ll.values());
-});
+// myhashmap.table.forEach((ll) => {
+//   console.log(ll.values());
+// });
 
-console.log(myhashmap.get('esam'));
-console.log(myhashmap.get('samah'));
+// console.log(myhashmap.get('esam'));
+// console.log(myhashmap.get('samah'));
 
-console.log(myhashmap.contains ('esam'));
-console.log(myhashmap.contains ('sam'));
+// console.log(myhashmap.contains('esam'));
+// console.log(myhashmap.contains('sam'));
 
-console.log(myhashmap.keys());
+// console.log(myhashmap.keys());
 
 
 
