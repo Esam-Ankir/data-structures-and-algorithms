@@ -3,6 +3,7 @@ const Node = require('./node');
 
 const BinaryTree = require('./binary-tree');
 const treeIntersection = require('./treeIntersection/tree-intersection');
+const leftJoin= require('./left-join/left-join');
 
 const myhashmap = new Hashmap(10);
 myhashmap.set('esam', 'student esam');
@@ -66,4 +67,26 @@ tree1 = new BinaryTree(one);
 tree2 = new BinaryTree(seven);
 console.log(treeIntersection(tree1, tree2));
 
+// left join
+const hash1 = new Hashmap(100);
+const hash2 = new Hashmap(100);
+hash1.set('diligent', 'employed');
+hash2.set('diligent', 'idle');
+hash1.set('fond', 'enamored');
+hash2.set('fond', 'averse');
+hash1.set('guide', 'usher');
+hash2.set('guide', 'follow');
+hash1.set('outfit', 'garb');//
+hash2.set('flow', 'jam');//
+hash1.set('wrath', 'anger');
+hash2.set('wrath', 'delight');
+//output:
+// [
+//   ["font", "enamored", "averse"],
+//   ["wrath", "anger", "delight"],
+//   ["diligent", "employed", "idle"],
+//   ["outfit", "garb", NULL],
+//   ["guide", "usher","follow"]
+// ]
+leftJoin(hash1, hash2);
 
