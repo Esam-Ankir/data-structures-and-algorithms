@@ -10,10 +10,10 @@ const invertTree = require('./mock_interview/easy/invertTree');
 const maxDepth = require('./mock_interview/easy/maxDepth');
 const minDepth = require('./mock_interview/easy/minDepth');
 const hasPathSum = require('./mock_interview/easy/hasPathSum');
-const sumNumbers = require('./mock_interview/medium/sumNumbers');
-const isBST = require('./mock_interview/medium/isBST');
-const levelOrderBottom = require('./mock_interview/easy/not_easy/levelOrderBottom');
-const isBalanced = require('./mock_interview/easy/not_easy/isBalanced');
+const sumNumbers = require('./mock_interview/easy/sumNumbers');
+const isBST = require('./mock_interview/easy/isBST');
+const levelOrderBottom = require('./mock_interview/easy/levelOrderBottom');
+const isBalanced = require('./mock_interview/easy/isBalanced');
 
 // let syTree = null;
 // let one = new Node(1);
