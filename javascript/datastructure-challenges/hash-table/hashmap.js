@@ -89,5 +89,34 @@ class Hashmap {
       }
     }
   }
+  // Determine the most common word in a book.
+  // static isCharUnique(string) {
+  //   let lowerCase = string.toLowerCase().replace(/[^\w\s]/g, '');
+  //   let token = lowerCase.split('');
+  //   // console.log(token);//[ 's', 't', 'r', 'i', 'n', 'g' ]
+  //   let newHash = new Hashmap(token.length);
+  //   // console.log(newHash);//Hashmap { size: 6, table: [ <6 empty items> ] }
+  //   console.log('====================================');
+  //   // console.log(token.length);
+  //   // console.log(token);
+  //   // console.log(newHash);
+
+  //   for (let i = 0; i < token.length; i++) {
+  //     // newHash.set(token[i], 1);
+  //     newHash.set(token[i], token[i]);
+  //   }
+  //   if (!newHash.contains(token[i])) {
+  //     console.log(true);
+  //     return true;
+  //   }else{
+  //     console.log(false);
+  //     return false;
+  //   }
+  //   // console.log(newHash.hash(token));
+
+  //   console.log(newHash.keys());
+  //   console.log('====================================');
+
+  // }
 }
 module.exports = Hashmap;
