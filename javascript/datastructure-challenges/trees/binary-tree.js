@@ -7,7 +7,7 @@ class BinaryTree {
   preOrder() {
     let result = [];
     let traverse = (node) => {
-      result.push(node.value);
+      result.push(node.value);//root first
       // if left go left
       if (node.left) traverse(node.left);
       // if right go right
@@ -22,7 +22,7 @@ class BinaryTree {
     let traverse = (node) => {
       // if left go left
       if (node.left) traverse(node.left);
-      result.push(node.value);
+      result.push(node.value);//root after left
       // if right go right
       if (node.right) traverse(node.right);
     };
@@ -37,12 +37,12 @@ class BinaryTree {
       if (node.left) traverse(node.left);
       // if right go right
       if (node.right) traverse(node.right);
-      result.push(node.value);
+      result.push(node.value);//root last
     };
     traverse(this.root);
     return result;
   }
-  //level order
+  //level order top-bottom
   breadthFirst() {
     let queue = [];
     let result = [];
@@ -58,6 +58,9 @@ class BinaryTree {
     }
     return result;
   }
+  //for all above
+  //Time complexity : O(n).
+  //Space complexity : O(n).
   findMax() {
     let max = 0;
     let traverse = (node) => {
@@ -72,7 +75,7 @@ class BinaryTree {
     let sum = 0;
     let traverse = (node) => {
       if (typeof (node.value) === 'number') {
-        if(node.value%2!==0){
+        if (node.value % 2 !== 0) {
           sum = sum + node.value;
         }
         if (node.left) traverse(node.left);
@@ -82,6 +85,7 @@ class BinaryTree {
     traverse(this.root);
     return sum;
   }
+
 }
 module.exports = BinaryTree;
 

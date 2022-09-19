@@ -43,7 +43,7 @@ console.log("list.includes(1):", list.includes(1));
 
 //for reverse
 const LL = new LinkedList();
-let reversedLL = new LinkedList();
+// let reversedLL = new LinkedList();
 LL.insert(7);
 LL.insert(2);
 LL.insert(3);
@@ -51,7 +51,7 @@ LL.insert(1);
 // console.log("reversedLL:",reversedLL.reverse(LL).toString());
 console.log('====================================');
 console.log("LL:", LL.toString());
-console.log("reversedLL:", reversedLL.reverse(LL).toString());
+console.log("reversedLL:", LL.reverse().toString());
 
 //LL: {1} -> {3} -> {2} -> {7} -> null
 //reversedLL: {7} --> {2} --> {3} --> {1} --> NULL
@@ -70,6 +70,9 @@ console.log("reversedLL:", reversedLL.reverse(LL).toString());
 // console.log("revLL: ",revLL.toString());
 // console.log("isPalindrome: ",l.isPalindrome());
 
+console.log('====================================');
+console.log('practice');
+console.log('====================================');
 
 
 

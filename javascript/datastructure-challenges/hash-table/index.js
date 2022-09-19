@@ -1,7 +1,7 @@
 const Hashmap = require('./hashmap');
 const Node = require('./node');
-
 const BinaryTree = require('./binary-tree');
+
 const treeIntersection = require('./treeIntersection/tree-intersection');
 const leftJoin= require('./left-join/left-join');
 
@@ -90,3 +90,5 @@ hash2.set('wrath', 'delight');
 // ]
 leftJoin(hash1, hash2);
 
+Hashmap.isCharUnique("string");//true
+// Hashmap.isCharUnique("strings");//false

@@ -1,15 +1,12 @@
 /* eslint-disable no-unused-vars */
-
 'use strict';
 const Node = require('./node');
-
 class LinkedList {
   constructor() {
     this.head = null;
     this.tail = null;
     this.length = 0;
   }
-
   insert(value) {
     let newNode = new Node(value);
     if (!this.head) {
@@ -133,42 +130,22 @@ class LinkedList {
     }
     return 'Exception';
   }
-  // zipLists(list1, list2) {
-
-  //   let node1 = list1.head;
-  //   let node2 = list2.head;
-  //   let outList = new LinkedList();
-  //   while (node1 || node2) {
-  //     if (node1) {
-  //       outList.append(node1.value);
-  //       node1 = node1.next;
-  //     }
-  //     if (node2) {
-  //       outList.append(node2.value);
-  //       node2 = node2.next;
-  //     }
-  //   }
-  //   return outList;
-  // }
-  reverse(LL) {
-    let prev = null;
-    let next = null;
-    let curr = LL.head;
-    let reversedLL = new LinkedList();
-    if (curr || curr.next) {
-      while (curr) {
-        next = curr.next;
-        curr.next = prev;
-        prev = curr;
-        curr = next;
+  zipLists(list1, list2) {
+    let node1 = list1.head;
+    let node2 = list2.head;
+    let outList = new LinkedList();
+    while (node1 || node2) {
+      if (node1) {
+        outList.append(node1.value);
+        node1 = node1.next;
       }
-      reversedLL.head = prev;
-      return reversedLL;
+      if (node2) {
+        outList.append(node2.value);
+        node2 = node2.next;
+      }
     }
-    reversedLL = LL;
-    return reversedLL;
+    return outList;
   }
-
   // reverseAndClone(node) {
   //   let head = null;
   //   while (node) {
@@ -189,6 +166,42 @@ class LinkedList {
   //   }
   //   return true;
   // }
+  // reverse(LL) {
+  //   let prev = null;
+  //   let next = null;
+  //   let curr = LL.head;
+  //   let reversedLL = new LinkedList();
+  //   if (curr || curr.next) {
+  //     while (curr) {
+  //       next = curr.next;
+  //       curr.next = prev;
+  //       prev = curr;
+  //       curr = next;
+  //     }
+  //     reversedLL.head = prev;
+  //     return reversedLL;
+  //   }
+  //   reversedLL = LL;
+  //   return reversedLL;
+  // }
+  reverse() {
+    let prev = null;
+    let next = null;
+    let curr = this.head;
+    // let reversedLL = this;
+    if (curr || curr.next) {
+      while (curr) {
+        next = curr.next;
+        curr.next = prev;
+        prev = curr;
+        curr = next;
+      }
+      this.head = prev;
+      // return this;
+    }
+    // this = this.head;
+    return this;
+  }
 }
 
 module.exports = LinkedList;
